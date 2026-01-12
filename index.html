@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louisville Kiosk</title>
+    <!-- Cache busting: load fresh CSS on every page load -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- YAML parser library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+</head>
+<body>
+    <div id="kiosk-container">
+        <!-- Status bar with time/date -->
+        <div id="status-bar">
+            <div id="current-time"></div>
+            <div id="current-date"></div>
+        </div>
+
+        <!-- Main slideshow container -->
+        <div id="slideshow">
+            <!-- Slides will be dynamically inserted here -->
+        </div>
+
+        <!-- Loading indicator -->
+        <div id="loading">Loading content...</div>
+    </div>
+
+    <!-- Cache busting: load fresh JS on every page load -->
+    <script>
+        // Add timestamp to script/CSS to bypass cache
+        const timestamp = Date.now();
+        const link = document.querySelector('link[href*="styles.css"]');
+        link.href = `css/styles.css?v=${timestamp}`;
+
+        const script = document.createElement('script');
+        script.src = `js/slideshow.js?v=${timestamp}`;
+        document.body.appendChild(script);
+    </script>
+</body>
+</html>

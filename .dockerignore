@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Development files
+.git/
+.gitignore
+Makefile
+README.md
+scripts/
+backups/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docs and notes
+*.md
+fetches/
+
+# Build files
+.buildpacks
+static.json
+.static

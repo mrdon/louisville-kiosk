@@ -1,0 +1,29 @@
+- title: Louisville School built in 1894
+  caption: Historic Victorian-era schoolhouse
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/louisville-school.png
+  category: historical
+
+- title: Louisville's downtown in 1910
+  caption: Historic view of downtown Louisville
+  background_image: images/backgrounds/colorado-town-scene.jpg
+  primary_image: images/primary/louisville-downtown-1910.png
+  category: historical
+
+- title: Memory Square Park
+  caption: Louisville's beautiful downtown gathering space
+  background_image: images/backgrounds/community-gathering.jpg
+  primary_image: images/primary/memory-square-park-library.jpg
+  category: current
+
+- title: Louisville Recreation Center
+  caption: State-of-the-art facility for the whole family
+  background_image: images/backgrounds/colorado-mountains.jpg
+  primary_image: images/primary/louisville-rec-center.jpeg
+  category: current
+
+- title: Acme Mine
+  caption: Acme Mine produced 1,729,282 tons of coal and employed hundreds of workers from 1888-1928.
+  background_image: images/backgrounds/colorado-mountains.jpg
+  primary_image: images/primary/acme-mine.png
+  category: historical

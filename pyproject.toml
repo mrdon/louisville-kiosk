@@ -1,0 +1,17 @@
+[project]
+name = "louisville-kiosk"
+version = "0.1.0"
+description = "Louisville, Colorado business kiosk - map generator"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pyyaml>=6.0.1",
+    "pillow>=10.0.0",
+    "staticmap>=0.5.7",
+    "requests>=2.31.0",
+    "qrcode>=7.4.2",
+    "beautifulsoup4>=4.14.3",
+]
+
+[dependency-groups]
+dev = []

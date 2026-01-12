@@ -1,0 +1,41 @@
+- content: Louisville was founded in 1877 as a mining community and named after Louis Nawatny, a local landowner.
+  icon: ⛏️
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/louisville-school.png
+  url: https://en.wikipedia.org/wiki/Louisville,_Colorado
+
+- content: Louisville has a population of over 21,000 residents with a median household income of $149,159.
+  icon: 🏘️
+  background_image: images/backgrounds/colorado-town-scene.jpg
+  primary_image: images/primary/louisville-school.png
+  url: https://worldpopulationreview.com/us-cities/colorado/louisville
+
+- content: The Louisville Farmers Market has been connecting local growers and residents since 2008.
+  icon: 🥕
+  background_image: images/backgrounds/community-gathering.jpg
+  primary_image: images/primary/louisville-school.png
+  url: https://www.downtownlouisvilleco.com/is/louisville-farmers-market/
+
+- content: Louisville transitioned from a coal mining town to a thriving suburban community in the 1950s.
+  icon: 🏛️
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/louisville-school.png
+  url: https://www.uncovercolorado.com/towns/louisville/
+
+- content: Louisville is located in Boulder County, just minutes from Denver and Boulder.
+  icon: 🗺️
+  background_image: images/backgrounds/colorado-mountains.jpg
+  primary_image: images/primary/louisville-school.png
+  url: https://www.uncovercolorado.com/towns/louisville/
+
+- content: The city celebrated its centennial in 1978, with a special flag designed by Barbara McKee.
+  icon: 🏴
+  background_image: images/backgrounds/colorado-town-scene.jpg
+  primary_image: images/primary/louisville-school.png
+  url: https://www.crwflags.com/fotw/flags/us-colou.html
+
+- content: Louisville's downtown historic district features beautifully preserved buildings from the early 1900s.
+  icon: 🏢
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/louisville-school.png
+  url: https://www.downtownlouisvilleco.com/history/

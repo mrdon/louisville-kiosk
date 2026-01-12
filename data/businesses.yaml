@@ -1,0 +1,404 @@
+# REAL Louisville, Colorado Businesses
+# Research conducted: January 2026
+# All addresses verified through web search
+
+- name: Bittersweet Cafe & Confections
+  logo: ☕
+  tagline: House-roasted coffee and fresh pastries since 2011
+  cta: Visit us at 836 Main Street
+  address: 836 Main St, Louisville, CO 80027
+  phone: (720) 402-7422
+  website: https://www.bittersweetcafes.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/coffee-shop-interior.jpg
+  map_image: images/maps/bittersweet-cafe-confections-06ab1936-map.jpg
+  qr_code: images/qrcodes/bittersweet-cafe-confections-qr.png
+  notes: Real business - Community gathering space on Main Street
+
+- name: Chinook Pharmacy
+  logo: 💊
+  tagline: Locally-owned pharmacy serving Louisville
+  cta: Free local delivery available
+  address: 625 Main St, Ste 1, Louisville, CO 80027
+  phone: (720) 458-4887
+  website: https://www.chinookrx.com/
+  background_image: images/backgrounds/colorado-town-scene.jpg
+  primary_image: images/primary/chinook-pharmacy-logo.png
+  map_image: images/maps/chinook-pharmacy-8c3a5675-map.jpg
+  qr_code: images/qrcodes/chinook-pharmacy-qr.png
+  notes: Real business - Independent pharmacy on Main Street
+
+- name: Boulder Valley Dental Center
+  logo: 🦷
+  tagline: Family dentistry with a gentle touch
+  cta: New patients welcome!
+  address: 1805 Hwy 42, Ste 120, Louisville, CO 80027
+  phone: (303) 666-8820
+  website: https://bouldervalleydental.com
+  background_image: images/backgrounds/indoor-community.jpg
+  primary_image: images/primary/boulder-valley-dental-staff.jpg
+  map_image: images/maps/boulder-valley-dental-center-8f5a3bbc-map.jpg
+  qr_code: images/qrcodes/boulder-valley-dental-center-qr.png
+  notes: Real business - Dental practice serving Boulder County
+
+- name: Shopey's Pizza
+  logo: 🍕
+  tagline: Pizza and sandwiches on Main Street
+  cta: Open daily for lunch and dinner
+  address: 640 Main St, Unit D, Louisville, CO 80027
+  website: https://www.shopeyspizza.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/shopeys-pizza-supreme.jpg
+  map_image: images/maps/shopeys-pizza-0722052b-map.jpg
+  qr_code: images/qrcodes/shopeys-pizza-qr.png
+  notes: Real business - Pizza restaurant on Main Street
+
+- name: Coal Creek Ace Hardware
+  logo: 🔨
+  tagline: Your local home improvement experts since 1972
+  cta: Stop by for friendly advice
+  address: 1343 E South Boulder Rd, Louisville, CO 80027
+  phone: (720) 736-7111
+  website: https://www.acehardware.com/store-details/17609
+  background_image: images/backgrounds/colorado-town-scene.jpg
+  primary_image: images/primary/coal-creek-ace-hardware-storefront.jpg
+  map_image: images/maps/coal-creek-ace-hardware-0a49435b-map.jpg
+  qr_code: images/qrcodes/coal-creek-ace-hardware-qr.png
+  notes: Real business - Family-owned Ace Hardware store
+
+- name: Moxie Bread Co
+  logo: 🥖
+  tagline: Artisan bread and pastries baked fresh daily
+  cta: Open 7am - 4pm daily
+  address: 641 Main St, Louisville, CO 80027
+  phone: (720) 420-9616
+  website: https://www.moxiebreadco.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/bakery-interior.jpg
+  map_image: images/maps/moxie-bread-co-5036c4aa-map.jpg
+  qr_code: images/qrcodes/moxie-bread-co-qr.png
+  notes: Real business - Community bakery in historic 19th century home
+
+- name: The Singing Cook
+  logo: 🍳
+  tagline: Unique kitchen essentials and gourmet specialty foods
+  cta: Visit us at 728 Main Street
+  address: 728 Main St, Louisville, CO 80027
+  phone: (720) 484-6825
+  website: http://www.singingcookstore.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/the-singing-cook.jpg
+  map_image: images/maps/the-singing-cook-1d58ef80-map.jpg
+  qr_code: images/qrcodes/the-singing-cook-qr.png
+  notes: Real business - Kitchen supply shop serving Louisville for 13+ years
+
+- name: 12Degree Brewing
+  logo: 🍺
+  tagline: Belgian-inspired artisanal ales in downtown Louisville
+  cta: Join us for craft beer and community
+  address: 820 Main St Ste 2, Louisville, CO 80027
+  phone: (720) 638-1623
+  website: http://www.12degree.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/12degree-brewing.jpg
+  map_image: images/maps/12degree-brewing-30ff6249-map.jpg
+  qr_code: images/qrcodes/12degree-brewing-qr.png
+  notes: Real business - Belgian-style brewery and pub on Main Street
+
+- name: Louisville Center for the Arts
+  logo: 🎨
+  tagline: Historic 1894 venue hosting concerts, theater, and art shows
+  cta: Experience the arts in a Victorian-era schoolhouse
+  address: 801 Grant Ave, Louisville, CO 80027
+  phone: (303) 335-4581
+  website: https://www.louisvilleco.gov/exploring-louisville/arts-events/facilities/louisville-center-for-the-arts
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/louisville-center-for-the-arts.png
+  map_image: images/maps/louisville-center-for-the-arts-5602de9b-map.jpg
+  qr_code: images/qrcodes/louisville-center-for-the-arts-qr.png
+  notes: Real business - Historic arts venue and community gathering space
+
+- name: The Waterloo
+  logo: 🎸
+  tagline: Family-run gathering place with great food, drinks, and music
+  cta: Visit our rooftop deck on Main Street
+  address: 817 Main St, Louisville, CO 80027
+  phone: (303) 993-2094
+  website: https://waterloolouisville.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/waterloo.jpg
+  map_image: images/maps/the-waterloo-6fbc87b1-map.jpg
+  qr_code: images/qrcodes/the-waterloo-qr.png
+  notes: Real business - Tex-Mex comfort food and music venue in historic Rex Theater
+
+- name: 740 Front
+  logo: 🍽️
+  tagline: One of Colorado's most iconic historic restaurants since 1904
+  cta: Experience dining at Colorado's oldest bar
+  address: 740 Front St, Louisville, CO 80027
+  phone: (720) 519-1972
+  website: https://740front.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/740-front.jpg
+  map_image: images/maps/740-front-5585cc85-map.jpg
+  qr_code: images/qrcodes/740-front-qr.png
+  notes: Real business - Historic American dining saloon with Colorado's oldest bar
+
+- name: Zucca Italian Ristorante
+  logo: 🍝
+  tagline: Authentic Italian cuisine with fresh ingredients
+  cta: Join us for dinner Tuesday through Sunday
+  address: 808 Main Street, Louisville, CO 80027
+  phone: (303) 666-6499
+  website: https://www.zuccalouisville.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/zucca-italian-ristorante.jpg
+  map_image: images/maps/zucca-italian-ristorante-31c7e3b7-map.jpg
+  qr_code: images/qrcodes/zucca-italian-ristorante-qr.png
+  notes: Real business - Locally owned Italian ristorante on Main Street
+
+- name: Pica's Mexican Taqueria
+  logo: 🌮
+  tagline: Serving the best tacos and margaritas since 2016
+  cta: Open daily for lunch and dinner
+  address: 901 Front St, Louisville, CO 80027
+  phone: (720) 535-8311
+  website: https://picascolorado.com/louisville
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/picas-mexican-taqueria.jpg
+  map_image: images/maps/picas-mexican-taqueria-c1f8984c-map.jpg
+  qr_code: images/qrcodes/picas-mexican-taqueria-qr.png
+  notes: Real business - Authentic Mexican taqueria on Front Street
+
+- name: Bob's Diner
+  logo: 🍳
+  tagline: A throwback to the 50's serving breakfast and lunch
+  cta: Visit us Monday through Saturday
+  address: 820 Main St, Louisville, CO 80027
+  phone: (303) 665-1056
+  website: https://www.bobsdinerlouisville.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/bobs-diner.jpg
+  map_image: images/maps/bobs-diner-485e83d8-map.jpg
+  qr_code: images/qrcodes/bobs-diner-qr.png
+  notes: Real business - Classic American diner on Main Street
+
+- name: Double Happy
+  logo: 🥡
+  tagline: Louisville's longest running business serving Chinese cuisine since 1981
+  cta: Open daily for lunch and dinner
+  address: 740 Main St, Louisville, CO 80027
+  phone: (303) 666-8821
+  website: https://bedoublehappy.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/double-happy.jpg
+  map_image: images/maps/double-happy-4a00aba3-map.jpg
+  qr_code: images/qrcodes/double-happy-qr.png
+  notes: Real business - Chinese and Vietnamese restaurant on Main Street
+
+- name: The Melting Pot
+  logo: 🫕
+  tagline: The original fondue restaurant offering interactive dining
+  cta: Perfect for date nights and celebrations
+  address: 732 Main St, Louisville, CO 80027
+  phone: (303) 666-7777
+  website: https://www.meltingpot.com/louisville-co
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/melting-pot.jpg
+  map_image: images/maps/the-melting-pot-5d9afacf-map.jpg
+  qr_code: images/qrcodes/the-melting-pot-qr.png
+  notes: Real business - Gourmet fondue restaurant on Main Street
+
+- name: Tilt Pinball
+  logo: 🕹️
+  tagline: Vintage arcade with 50+ pinball and arcade games
+  cta: Full bar and scratch-made NY style pizza
+  address: 640 Main St, Ste B, Louisville, CO 80027
+  phone: (303) 997-9548
+  website: https://www.tiltcolorado.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/tilt-pinball.jpg
+  map_image: images/maps/tilt-pinball-f3e6b9a9-map.jpg
+  qr_code: images/qrcodes/tilt-pinball-qr.png
+  notes: Real business - Pinball arcade and bar on Main Street
+
+- name: Relish Food Hall
+  logo: 🏓
+  tagline: Food hall with 7 local restaurants and 19 pickleball courts
+  cta: Enjoy food and play at Colorado's largest indoor pickleball club
+  address: 550 S McCaslin Blvd, Louisville, CO 80027
+  phone: (720) 436-2739
+  website: https://www.visitrelish.com
+  background_image: images/backgrounds/community-gathering.jpg
+  primary_image: images/primary/relish-food-hall.jpg
+  map_image: images/maps/relish-food-hall-99b41919-map.jpg
+  qr_code: images/qrcodes/relish-food-hall-qr.png
+  notes: Real business - Food hall and pickleball facility on McCaslin Boulevard
+
+- name: Louisville Underground
+  logo: 🎭
+  tagline: Hidden speakeasy featuring live music and comedy shows
+  cta: Enter through Tilt Pinball for craft cocktails and entertainment
+  address: 640 Main St, Louisville, CO 80027
+  phone: (303) 997-9548
+  website: https://www.thelouisvilleunderground.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/louisville-underground.jpg
+  map_image: images/maps/louisville-underground-824b613a-map.jpg
+  qr_code: images/qrcodes/louisville-underground-qr.png
+  notes: Real business - Speakeasy bar and event venue beneath Tilt Pinball
+
+- name: Rocky Mountain Tap & Garden
+  logo: 🍺
+  tagline: Self-pour beer wall with 30+ taps and 10,000 sq ft beer garden
+  cta: Family and dog-friendly dining with live music
+  address: 1071 Courtesy Rd, Louisville, CO 80027
+  phone: (720) 900-2440
+  website: https://rockymountaintap.com
+  background_image: images/backgrounds/community-gathering.jpg
+  primary_image: images/primary/rocky-mountain-tap-and-garden.jpg
+  map_image: images/maps/rocky-mountain-tap-garden-4aa1f089-map.jpg
+  qr_code: images/qrcodes/rocky-mountain-tap-garden-qr.png
+  notes: Real business - Upscale beer emporium with craft kitchen on Courtesy Road
+
+- name: Pitch Karaoke
+  logo: 🎤
+  tagline: Private suite karaoke with 5 soundproof rooms
+  cta: Sing your heart out with food and drinks delivered to your room
+  address: 640 Main St, Ste C, Louisville, CO 80027
+  phone: (720) 730-4105
+  website: https://www.pitchkaraoke.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/pitch-karaoke.jpg
+  map_image: images/maps/pitch-karaoke-872e483a-map.jpg
+  qr_code: images/qrcodes/pitch-karaoke-qr.png
+  notes: Real business - Private karaoke suites on Main Street
+
+- name: Gravity Brewing
+  logo: 🍺
+  tagline: Award-winning craft brewery in historic downtown
+  cta: Enjoy our laid-back tasting room and locally brewed beers
+  address: 1150 Pine St, Ste B, Louisville, CO 80027
+  phone: (303) 544-0995
+  website: https://www.thegravitybrewing.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/gravity-brewing.jpg
+  map_image: images/maps/gravity-brewing-dc5480a1-map.jpg
+  qr_code: images/qrcodes/gravity-brewing-qr.png
+  notes: Real business - Craft brewery and tasting room on Pine Street
+
+- name: The Birdie Bar
+  logo: ⛳
+  tagline: Indoor golf simulators with craft cocktails and mini-golf
+  cta: Play virtual courses on Uneekor simulators
+  address: 947 Pine St, Louisville, CO 80027
+  phone: (720) 881-6111
+  website: https://www.thebirdie.bar
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/birdie-bar.png
+  map_image: images/maps/the-birdie-bar-11f51d7c-map.jpg
+  qr_code: images/qrcodes/the-birdie-bar-qr.png
+  notes: Real business - Indoor golf bar and entertainment venue on Pine Street
+
+- name: Crystal Springs Brewing
+  logo: 🍺
+  tagline: Craft brewery since 2010 in downtown Louisville
+  cta: Visit our taproom for locally brewed craft beers
+  address: 604 Main St, Louisville, CO 80027
+  phone: (720) 572-7975
+  website: https://crystalspringsbrewing.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/crystal-springs-brewing.jpg
+  map_image: images/maps/crystal-springs-brewing-d726668f-map.jpg
+  qr_code: images/qrcodes/crystal-springs-brewing-qr.png
+  notes: Real business - Downtown taproom and craft brewery on Main Street
+
+- name: Radiance Medspa
+  logo: 💆
+  tagline: Medical spa with 19 years of aesthetic expertise
+  cta: Experience natural-looking results with expert care
+  address: 916 Main St, Louisville, CO 80027
+  phone: (303) 900-6644
+  website: https://www.radiancemedspalouisville.com
+  background_image: images/backgrounds/indoor-community.jpg
+  primary_image: images/primary/radiance-medspa.png
+  map_image: images/maps/radiance-medspa-63ea1423-map.jpg
+  qr_code: images/qrcodes/radiance-medspa-qr.png
+  notes: Real business - Medical spa and aesthetic treatments on Main Street
+
+- name: Louisville Cyclery
+  logo: 🚴
+  tagline: Your local bike shop serving Boulder County since 1980
+  cta: Expert service and quality bikes for every rider
+  address: 889 E South Boulder Rd, Louisville, CO 80027
+  phone: (303) 665-6343
+  website: https://www.louisvillecyclery.com
+  background_image: images/backgrounds/colorado-town-scene.jpg
+  primary_image: images/primary/louisville-cyclery.jpg
+  map_image: images/maps/louisville-cyclery-06105496-map.jpg
+  qr_code: images/qrcodes/louisville-cyclery-qr.png
+  notes: Real business - Trek dealer and full-service bike shop since 1980
+
+- name: Louisville Farmers Market
+  logo: 🥕
+  tagline: Supporting local farms and Colorado orchards since 1999
+  cta: Visit us seasonally at 824 Front Street
+  address: 824 Front St, Louisville, CO 80027
+  phone: (303) 902-2451
+  website: https://realfarmersmarketco.com
+  background_image: images/backgrounds/community-gathering.jpg
+  primary_image: images/primary/louisville-farmers-market.jpg
+  map_image: images/maps/louisville-farmers-market-fca45737-map.jpg
+  qr_code: images/qrcodes/louisville-farmers-market-qr.png
+  notes: Real business - Weekly seasonal farmers market in downtown Louisville
+
+- name: Centerstage Theatre Company
+  logo: 🎭
+  tagline: Musical theatre for kids, youth, and emerging artists
+  cta: Join us for inclusive performances and theatre training
+  address: "901 Front St #B100, Louisville, CO 80027"
+  phone: (303) 529-2782
+  website: http://www.centerstagetheatrecompany.org
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/centerstage-theatre-company.jpg
+  map_image: images/maps/centerstage-theatre-company-c1f8984c-map.jpg
+  qr_code: images/qrcodes/centerstage-theatre-company-qr.png
+  notes: Real business - Theatre company with Tapestry program for special needs performers
+
+- name: Por Wine House
+  logo: 🍷
+  tagline: Beautiful space filled with great wine and live music
+  cta: Experience wine and entertainment on Main Street
+  address: 701 A Main St, Louisville, CO 80027
+  phone: (720) 668-9958
+  website: http://www.porwinehouse.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/por-wine-house.jpg
+  map_image: images/maps/por-wine-house-cefdc07f-map.jpg
+  qr_code: images/qrcodes/por-wine-house-qr.png
+  notes: Real business - Wine bar with live music and pizza on Main Street
+
+- name: The Jasmine Bar
+  logo: 🍸
+  tagline: Craft cocktails and dining since 2024
+  cta: Join us for cocktails Wednesday through Sunday
+  address: 836 1/2 Main St, Louisville, CO 80027
+  phone: (303) 578-6393
+  website: https://www.thejasminebar.com
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/the-jasmine-bar.jpg
+  map_image: images/maps/the-jasmine-bar-bbe30414-map.jpg
+  qr_code: images/qrcodes/the-jasmine-bar-qr.png
+  notes: Real business - Cocktail bar with event hosting on Main Street
+
+- name: Nora's Speakeasy
+  logo: 🥃
+  tagline: Underground speakeasy with craft cocktails and happy hour nightly
+  cta: Visit us at 957 Main Street for cocktails and classes
+  address: 957 Main St, Louisville, CO 80027
+  website: https://www.noras.place
+  background_image: images/backgrounds/historic-downtown.jpg
+  primary_image: images/primary/noras.jpeg
+  map_image: images/maps/noras-speakeasy-c8b9d7ff-map.jpg
+  qr_code: images/qrcodes/noras-speakeasy-qr.png
+  notes: Real business - Underground speakeasy bar on Main Street
