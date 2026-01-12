@@ -532,6 +532,24 @@ body {
     display: none;
 }
 
+/* Pause indicator */
+#pause-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+#pause-indicator.hidden {
+    display: none;
+}
+
+#pause-indicator svg {
+    display: block;
+}
+
 /* Responsive sizing handled by clamp() functions above */
 /* All content scales fluidly based on viewport dimensions */
 /* Optimized for 1080p (1920x1080) but works on all screen sizes */

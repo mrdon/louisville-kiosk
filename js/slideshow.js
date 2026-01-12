@@ -6,9 +6,12 @@ class KioskSlideshow {
         this.slideDuration = 10000; // 10 seconds per slide
         this.slideContainer = document.getElementById('slideshow');
         this.loadingElement = document.getElementById('loading');
+        this.pauseIndicator = document.getElementById('pause-indicator');
         this.animationProbability = 0.4; // 40% chance of animation
         this.rotationInterval = null; // Track the rotation interval
         this.slideStats = new Map(); // Track times shown per unique slide
+        this.isPaused = false; // Track pause state
+        this.slideHistory = []; // Track history of slides shown for back navigation
 
         // Master weight configuration
         // Higher weight = appears more frequently in rotation
@@ -142,20 +145,26 @@ class KioskSlideshow {
                 this.startRotation();
             } else {
                 console.log('Hash anchor present, auto-rotation disabled');
+                this.isPaused = true;
+                this.updatePauseIndicator();
             }
 
             // Listen for hash changes to start/stop rotation
             window.addEventListener('hashchange', () => {
                 if (window.location.hash) {
-                    console.log('Hash added, stopping rotation');
+                    console.log('Hash added, pausing rotation');
+                    this.isPaused = true;
                     this.stopRotation();
+                    this.updatePauseIndicator();
                     // Navigate to the slide specified by the new hash
                     const newIndex = this.getSlideIndexFromHash();
                     this.currentIndex = newIndex;
                     this.showSlide(newIndex);
                 } else {
-                    console.log('Hash removed, starting rotation');
+                    console.log('Hash removed, resuming rotation');
+                    this.isPaused = false;
                     this.startRotation();
+                    this.updatePauseIndicator();
                 }
             });
 
@@ -169,9 +178,92 @@ class KioskSlideshow {
             // Auto-refresh page every 12 hours (picks up code/CSS updates)
             setTimeout(() => location.reload(true), 12 * 60 * 60 * 1000);
 
+            // Setup keyboard controls
+            this.setupKeyboardControls();
+
         } catch (error) {
             console.error('Failed to load content:', error);
             this.loadingElement.textContent = 'Error loading content. Please check data files.';
+        }
+    }
+
+    setupKeyboardControls() {
+        document.addEventListener('keydown', (e) => {
+            switch(e.key) {
+                case ' ':
+                    // Space bar: pause/resume
+                    e.preventDefault();
+                    this.togglePause();
+                    break;
+                case 'ArrowRight':
+                    // Right arrow: next slide
+                    e.preventDefault();
+                    this.nextSlide();
+                    break;
+                case 'ArrowLeft':
+                    // Left arrow: previous slide
+                    e.preventDefault();
+                    this.previousSlide();
+                    break;
+            }
+        });
+    }
+
+    updatePauseIndicator() {
+        if (this.isPaused) {
+            this.pauseIndicator.classList.remove('hidden');
+        } else {
+            this.pauseIndicator.classList.add('hidden');
+        }
+    }
+
+    togglePause() {
+        if (this.isPaused) {
+            console.log('Resuming slideshow');
+            this.isPaused = false;
+            this.startRotation();
+        } else {
+            console.log('Pausing slideshow');
+            this.isPaused = true;
+            this.stopRotation();
+        }
+        this.updatePauseIndicator();
+    }
+
+    nextSlide() {
+        // Stop rotation if playing, select next slide manually
+        if (this.rotationInterval) {
+            this.stopRotation();
+            this.isPaused = true;
+            this.updatePauseIndicator();
+        }
+
+        // Add current slide to history before moving to next
+        this.slideHistory.push(this.currentIndex);
+
+        // Keep only last 10 slides in history
+        if (this.slideHistory.length > 10) {
+            this.slideHistory.shift();
+        }
+
+        this.currentIndex = this.selectNextSlide();
+        this.showSlide(this.currentIndex);
+    }
+
+    previousSlide() {
+        // Stop rotation if playing, go to previous slide manually
+        if (this.rotationInterval) {
+            this.stopRotation();
+            this.isPaused = true;
+            this.updatePauseIndicator();
+        }
+
+        // Go back in history if available
+        if (this.slideHistory.length > 0) {
+            this.currentIndex = this.slideHistory.pop();
+            this.showSlide(this.currentIndex);
+        } else {
+            console.log('No previous slide in history');
         }
     }
 
@@ -470,12 +562,20 @@ class KioskSlideshow {
     }
 
     startRotation() {
-        // Don't start if already running or if hash is present
-        if (this.rotationInterval || window.location.hash) {
+        // Don't start if already running, paused, or if hash is present
+        if (this.rotationInterval || this.isPaused || window.location.hash) {
             return;
         }
 
         this.rotationInterval = setInterval(() => {
+            // Add current slide to history before moving to next
+            this.slideHistory.push(this.currentIndex);
+
+            // Keep only last 10 slides in history
+            if (this.slideHistory.length > 10) {
+                this.slideHistory.shift();
+            }
+
             // Use score-based selection instead of linear playback
             this.currentIndex = this.selectNextSlide();
 
