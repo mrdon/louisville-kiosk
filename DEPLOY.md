@@ -28,19 +28,19 @@ This validates all YAML files and checks that required deployment files exist.
 
 ```bash
 # SSH into your Dokku server
-dokku apps:create louisville-kiosk
+dokku apps:create louisville
 
 # Set domain (optional)
-dokku domains:add louisville-kiosk yourdomain.com
+dokku domains:add louisville yourdomain.com
 
 # Enable SSL with Let's Encrypt (optional but recommended)
-dokku letsencrypt:enable louisville-kiosk
+dokku letsencrypt:enable louisville
 ```
 
 ### 3. Set up git remote (first time only)
 
 ```bash
-git remote add dokku dokku@your-server.com:louisville-kiosk
+git remote add dokku dokku@your-server.com:louisville
 ```
 
 ### 4. Deploy

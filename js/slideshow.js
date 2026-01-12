@@ -520,8 +520,16 @@ class KioskSlideshow {
     }
 }
 
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize when page loads (or immediately if already loaded)
+function initKiosk() {
     const kiosk = new KioskSlideshow();
     kiosk.init();
-});
+}
+
+if (document.readyState === 'loading') {
+    // DOM not ready yet, wait for it
+    document.addEventListener('DOMContentLoaded', initKiosk);
+} else {
+    // DOM is already ready, init immediately
+    initKiosk();
+}
