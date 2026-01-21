@@ -33,6 +33,11 @@
         <div id="loading">Loading content...</div>
     </div>
 
+    <!-- Fullscreen prompt overlay -->
+    <div id="fullscreen-prompt" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:flex;align-items:center;justify-content:center;z-index:9999;cursor:pointer;">
+        <div style="color:white;font-size:24px;text-align:center;">Tap anywhere to enter fullscreen</div>
+    </div>
+
     <!-- Cache busting: load fresh JS on every page load -->
     <script>
         // Add timestamp to script/CSS to bypass cache
@@ -43,6 +48,37 @@
         const script = document.createElement('script');
         script.src = `js/slideshow.js?v=${timestamp}`;
         document.body.appendChild(script);
+
+        // Fullscreen handling
+        const prompt = document.getElementById('fullscreen-prompt');
+
+        function enterFullscreen() {
+            const elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            } else if (elem.mozRequestFullScreen) {
+                elem.mozRequestFullScreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+            prompt.style.display = 'none';
+        }
+
+        // Check if already fullscreen or if fullscreen is supported
+        function isFullscreen() {
+            return document.fullscreenElement || document.webkitFullscreenElement ||
+                   document.mozFullScreenElement || document.msFullscreenElement;
+        }
+
+        // Hide prompt if fullscreen not supported or already fullscreen
+        if (isFullscreen()) {
+            prompt.style.display = 'none';
+        }
+
+        prompt.addEventListener('click', enterFullscreen);
+        prompt.addEventListener('touchstart', enterFullscreen);
     </script>
 </body>
 </html>
