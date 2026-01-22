@@ -154,6 +154,7 @@ body {
 
 /* Title at top */
 .slide.business .business-name {
+    font-size: 3.5rem; /* Fallback for older browsers */
     font-size: clamp(2.8rem, 6vh, 5rem);
     font-weight: 700;
     margin-bottom: 2vh;
@@ -161,12 +162,14 @@ body {
 
 /* Description below image */
 .slide.business .business-tagline {
+    font-size: 2.2rem; /* Fallback for older browsers */
     font-size: clamp(1.8rem, 4vh, 3rem);
     font-weight: 300;
     margin-bottom: 2vh;
 }
 
 .slide.business .business-address {
+    font-size: 1.8rem; /* Fallback for older browsers */
     font-size: clamp(1.5rem, 3vh, 2.4rem);
     font-weight: 400;
     margin-bottom: 1vh;
@@ -174,6 +177,7 @@ body {
 }
 
 .slide.business .business-phone {
+    font-size: 1.7rem; /* Fallback for older browsers */
     font-size: clamp(1.4rem, 2.8vh, 2.2rem);
     font-weight: 300;
     margin-bottom: 2vh;
@@ -181,6 +185,7 @@ body {
 }
 
 .slide.business .business-cta {
+    font-size: 1.9rem; /* Fallback for older browsers */
     font-size: clamp(1.6rem, 3.2vh, 2.5rem);
     font-weight: 500;
     margin-top: 1vh;
@@ -195,6 +200,7 @@ body {
     gap: 3vw;
     align-items: flex-start;
     width: 100%;
+    max-width: 1000px; /* Fallback for older browsers */
     max-width: clamp(600px, 80vw, 1400px);
 }
 
@@ -222,14 +228,17 @@ body {
 }
 
 .slide.fact h2 {
+    font-size: 2.5rem; /* Fallback for older browsers */
     font-size: clamp(2rem, 4vh, 3.5rem);
     font-weight: 600;
     margin-bottom: 3vh;
 }
 
 .slide.fact .fact-content {
+    font-size: 2rem; /* Fallback for older browsers */
     font-size: clamp(1.5rem, 3vh, 2.8rem);
     font-weight: 300;
+    max-width: 800px; /* Fallback for older browsers */
     max-width: clamp(600px, 65vw, 1100px);
     line-height: 1.5;
 }
@@ -240,6 +249,7 @@ body {
 }
 
 .slide.major-event h2 {
+    font-size: 3.2rem; /* Fallback for older browsers */
     font-size: clamp(2.5rem, 5vh, 4.5rem);
     font-weight: 700;
     margin-bottom: 2vh;
@@ -247,14 +257,17 @@ body {
 }
 
 .slide.major-event .event-details {
+    font-size: 2rem; /* Fallback for older browsers */
     font-size: clamp(1.5rem, 3vh, 2.8rem);
     font-weight: 300;
     margin-bottom: 1.5vh;
 }
 
 .slide.major-event .event-description {
+    font-size: 1.5rem; /* Fallback for older browsers */
     font-size: clamp(1.2rem, 2.5vh, 2rem);
     font-weight: 300;
+    max-width: 750px; /* Fallback for older browsers */
     max-width: clamp(600px, 60vw, 1000px);
     line-height: 1.4;
     margin-top: 2vh;
@@ -262,7 +275,9 @@ body {
 
 /* Event image - smaller than default */
 .slide.major-event .primary-image-container {
+    width: 600px; /* Fallback for older browsers */
     width: clamp(400px, 45vw, 900px);
+    height: 350px; /* Fallback for older browsers */
     height: clamp(250px, 30vh, 500px);
     margin-bottom: 4vh;
 }
@@ -270,9 +285,11 @@ body {
 /* Event content layout - QR code + text */
 .event-content {
     display: flex;
+    gap: 50px; /* Fallback for older browsers */
     gap: clamp(30px, 4vw, 80px);
     align-items: flex-start;
     width: 100%;
+    max-width: 1000px; /* Fallback for older browsers */
     max-width: clamp(600px, 80vw, 1400px);
 }
 
@@ -296,6 +313,7 @@ body {
 }
 
 .slide.daily-events h2 {
+    font-size: 3rem; /* Fallback for older browsers */
     font-size: clamp(2.5rem, 5vh, 4rem);
     font-weight: 700;
     margin-bottom: 3vh;
@@ -305,6 +323,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    max-width: 900px; /* Fallback for older browsers */
     max-width: clamp(700px, 70vw, 1200px);
     margin: 0 auto;
 }
@@ -317,10 +336,11 @@ body {
     background: rgba(255, 255, 255, 0.1);
     padding: 2vh 3vw;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter removed for older browser compatibility */
 }
 
 .slide.daily-events .daily-event-time {
+    font-size: 2.2rem; /* Fallback for older browsers */
     font-size: clamp(1.8rem, 3.5vh, 3rem);
     font-weight: 600;
     white-space: nowrap;
@@ -333,18 +353,21 @@ body {
 }
 
 .slide.daily-events .daily-event-title {
+    font-size: 1.8rem; /* Fallback for older browsers */
     font-size: clamp(1.5rem, 3vh, 2.5rem);
     font-weight: 500;
     line-height: 1.3;
 }
 
 .slide.daily-events .daily-event-location {
+    font-size: 1.5rem; /* Fallback for older browsers */
     font-size: clamp(1.2rem, 2.3vh, 2rem);
     font-weight: 300;
     opacity: 0.9;
 }
 
 .slide.daily-events .daily-events-empty {
+    font-size: 1.8rem; /* Fallback for older browsers */
     font-size: clamp(1.5rem, 3vh, 2.5rem);
     font-weight: 300;
     opacity: 0.8;
@@ -394,12 +417,14 @@ body {
 }
 
 .slide.image .image-title {
+    font-size: 2rem; /* Fallback for older browsers */
     font-size: clamp(1.5rem, 3vh, 2.8rem);
     font-weight: 600;
     margin-bottom: 1vh;
 }
 
 .slide.image .image-caption {
+    font-size: 1.4rem; /* Fallback for older browsers */
     font-size: clamp(1.1rem, 2.2vh, 2rem);
     font-weight: 300;
     opacity: 0.9;
@@ -423,7 +448,9 @@ body {
 /* Primary image - positioned above text, scaled for screen - 50% bigger */
 .primary-image-container {
     position: relative;
+    width: 900px; /* Fallback for older browsers */
     width: clamp(600px, 67.5vw, 1350px);
+    height: 500px; /* Fallback for older browsers */
     height: clamp(375px, 45vh, 750px);
     margin: 0 auto 6vh auto;
     z-index: 1;
@@ -442,7 +469,9 @@ body {
 /* Business image wrapper - contains both primary image and map overlay */
 .business-image-wrapper {
     position: relative;
+    width: 650px; /* Fallback for older browsers */
     width: clamp(400px, 55vw, 900px);
+    height: 350px; /* Fallback for older browsers */
     height: clamp(220px, 35vh, 500px);
     margin: 0 auto 8vh auto; /* Extra margin to account for map overlay extending below */
 }
@@ -493,6 +522,7 @@ body {
 /* QR code section */
 .qr-section {
     flex: 0 0 auto;
+    width: 140px; /* Fallback for older browsers */
     width: clamp(100px, 15vw, 180px);
     background: white;
     padding: 10px;
@@ -512,6 +542,7 @@ body {
 }
 
 .qr-label {
+    font-size: 1.2rem; /* Fallback for older browsers */
     font-size: clamp(1rem, 2vh, 1.4rem);
     font-weight: 600;
     color: #000;
@@ -537,3 +568,219 @@ body {
 /* Responsive sizing handled by clamp() functions above */
 /* All content scales fluidly based on viewport dimensions */
 /* Optimized for 1080p (1920x1080) but works on all screen sizes */
+
+/* Portrait mode optimization for Fire Tablet 7" (600x1024) and similar devices */
+@media (orientation: portrait) and (max-width: 700px) {
+    /* Business slides - portrait adjustments */
+    .slide.business .business-name {
+        font-size: 2.5rem;
+        font-size: clamp(2rem, 5vh, 3rem);
+        margin-bottom: 1.5vh;
+    }
+
+    .slide.business .business-tagline {
+        font-size: 1.6rem;
+        font-size: clamp(1.3rem, 3vh, 2rem);
+    }
+
+    .slide.business .business-address {
+        font-size: 1.4rem;
+        font-size: clamp(1.2rem, 2.5vh, 1.8rem);
+    }
+
+    .slide.business .business-phone {
+        font-size: 1.3rem;
+        font-size: clamp(1.1rem, 2.2vh, 1.6rem);
+    }
+
+    .slide.business .business-cta {
+        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 2.5vh, 1.8rem);
+        padding: 1vh 3vw;
+    }
+
+    /* Business content - restructured for portrait */
+    .business-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        max-width: 90vw;
+        align-items: center;
+    }
+
+    /* Description (tagline) spans full width */
+    .slide.business .business-tagline {
+        width: 100%;
+        text-align: center;
+        margin-top: 3vh;
+    }
+
+    /* Two-column layout: QR on left | Address+Phone stacked on right */
+    .business-info-row {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 6vw;
+        width: 100%;
+        align-items: center;
+    }
+
+    .business-info-row .qr-section {
+        justify-self: center;
+    }
+
+    /* Address and phone stack vertically, centered */
+    .business-contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vh;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .business-contact-info .business-address {
+        margin: 0;
+    }
+
+    .business-contact-info .business-phone {
+        margin: 0;
+    }
+
+    /* CTA stays below, centered */
+    .business-text {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .business-text .business-cta {
+        align-self: center;
+    }
+
+    /* Business image wrapper - smaller for portrait */
+    .business-image-wrapper {
+        width: 85vw;
+        height: 40vh;
+        margin: 0 auto 4vh auto;
+    }
+
+    /* Primary image container - adjust for portrait */
+    .primary-image-container {
+        width: 85vw;
+        height: 35vh;
+    }
+
+    /* Fact slides - portrait adjustments */
+    .slide.fact h2 {
+        font-size: 2rem;
+        font-size: clamp(1.8rem, 3.5vh, 2.5rem);
+    }
+
+    .slide.fact .fact-content {
+        font-size: 1.4rem;
+        font-size: clamp(1.2rem, 2.5vh, 1.8rem);
+        max-width: 90vw;
+    }
+
+    /* Major event slides - portrait adjustments */
+    .slide.major-event h2 {
+        font-size: 2.2rem;
+        font-size: clamp(1.8rem, 4vh, 2.8rem);
+    }
+
+    .slide.major-event .event-details {
+        font-size: 1.5rem;
+        font-size: clamp(1.3rem, 2.5vh, 1.8rem);
+    }
+
+    .slide.major-event .event-description {
+        font-size: 1.2rem;
+        font-size: clamp(1rem, 2vh, 1.5rem);
+        max-width: 90vw;
+    }
+
+    .slide.major-event .primary-image-container {
+        width: 85vw;
+        height: 35vh;
+    }
+
+    /* Event content - stack vertically */
+    .event-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+        max-width: 90vw;
+    }
+
+    .event-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .event-text h2 {
+        text-align: center;
+    }
+
+    /* Daily events - portrait adjustments */
+    .slide.daily-events h2 {
+        font-size: 2.2rem;
+        font-size: clamp(1.8rem, 4vh, 2.5rem);
+        margin-bottom: 2vh;
+    }
+
+    .slide.daily-events .daily-events-list {
+        max-width: 90vw;
+        gap: 1.5vh;
+    }
+
+    .slide.daily-events .daily-event-item {
+        padding: 1.5vh 3vw;
+        gap: 3vw;
+    }
+
+    .slide.daily-events .daily-event-time {
+        font-size: 1.6rem;
+        font-size: clamp(1.4rem, 3vh, 2rem);
+    }
+
+    .slide.daily-events .daily-event-title {
+        font-size: 1.4rem;
+        font-size: clamp(1.2rem, 2.5vh, 1.8rem);
+    }
+
+    .slide.daily-events .daily-event-location {
+        font-size: 1.1rem;
+        font-size: clamp(1rem, 2vh, 1.4rem);
+    }
+
+    .slide.daily-events .daily-events-empty {
+        font-size: 1.5rem;
+        font-size: clamp(1.3rem, 2.5vh, 1.8rem);
+    }
+
+    /* Image slides - portrait adjustments */
+    .slide.image .image-title {
+        font-size: 1.6rem;
+        font-size: clamp(1.4rem, 2.8vh, 2rem);
+    }
+
+    .slide.image .image-caption {
+        font-size: 1.2rem;
+        font-size: clamp(1rem, 2vh, 1.5rem);
+    }
+
+    /* QR code section - slightly smaller in portrait */
+    .qr-section {
+        width: 120px;
+        width: clamp(100px, 20vw, 140px);
+    }
+
+    .qr-label {
+        font-size: 1rem;
+        font-size: clamp(0.9rem, 1.8vh, 1.2rem);
+    }
+
+    /* Reduce padding for portrait mode */
+    .slide {
+        padding: 3vh 4vw;
+    }
+}

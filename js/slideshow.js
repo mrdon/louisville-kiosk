@@ -177,6 +177,9 @@ class KioskSlideshow {
             // Setup keyboard controls
             this.setupKeyboardControls();
 
+            // Setup touch controls for tablets
+            this.setupTouchControls();
+
         } catch (error) {
             console.error('Failed to load content:', error);
             this.loadingElement.textContent = 'Error loading content. Please check data files.';
@@ -192,15 +195,64 @@ class KioskSlideshow {
                     this.togglePause();
                     break;
                 case 'ArrowRight':
-                    // Right arrow: next slide
+                    // Right arrow: next slide (don't auto-pause)
                     e.preventDefault();
-                    this.nextSlide();
+                    this.nextSlide(false);
                     break;
                 case 'ArrowLeft':
-                    // Left arrow: previous slide
+                    // Left arrow: previous slide (don't auto-pause)
                     e.preventDefault();
-                    this.previousSlide();
+                    this.previousSlide(false);
                     break;
+            }
+        });
+    }
+
+    setupTouchControls() {
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchStartTime = 0;
+        const swipeThreshold = 50; // Minimum distance for a swipe
+        const tapThreshold = 10; // Maximum movement for a tap
+        const tapTimeThreshold = 300; // Maximum time for a tap (ms)
+
+        this.slideContainer.addEventListener('touchstart', (e) => {
+            console.log('Touch start detected:', e.touches[0].clientX, e.touches[0].clientY);
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchStartTime = Date.now();
+        });
+
+        this.slideContainer.addEventListener('touchend', (e) => {
+            console.log('Touch end detected');
+
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+            const touchEndTime = Date.now();
+
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+            const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+            const duration = touchEndTime - touchStartTime;
+
+            // Check if it's a tap (small movement, quick)
+            if (distance < tapThreshold && duration < tapTimeThreshold) {
+                console.log('Tap detected - toggling pause');
+                this.togglePause();
+                return;
+            }
+
+            // Check if it's a horizontal swipe
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > swipeThreshold) {
+                if (deltaX > 0) {
+                    // Swipe right - go to previous slide (don't auto-pause)
+                    console.log('Swipe right - previous slide');
+                    this.previousSlide(false);
+                } else {
+                    // Swipe left - go to next slide (don't auto-pause)
+                    console.log('Swipe left - next slide');
+                    this.nextSlide(false);
+                }
             }
         });
     }
@@ -226,10 +278,16 @@ class KioskSlideshow {
         this.updatePauseIndicator();
     }
 
-    nextSlide() {
-        // Stop rotation if playing, select next slide manually
+    nextSlide(autoPause = true) {
+        const wasPlaying = this.rotationInterval && !this.isPaused;
+
+        // Stop rotation to reset timer
         if (this.rotationInterval) {
             this.stopRotation();
+        }
+
+        // Set pause state if requested
+        if (autoPause) {
             this.isPaused = true;
             this.updatePauseIndicator();
         }
@@ -244,12 +302,23 @@ class KioskSlideshow {
 
         this.currentIndex = this.selectNextSlide();
         this.showSlide(this.currentIndex);
+
+        // Restart rotation if it was playing and we're not pausing
+        if (wasPlaying && !autoPause) {
+            this.startRotation();
+        }
     }
 
-    previousSlide() {
-        // Stop rotation if playing, go to previous slide manually
+    previousSlide(autoPause = true) {
+        const wasPlaying = this.rotationInterval && !this.isPaused;
+
+        // Stop rotation to reset timer
         if (this.rotationInterval) {
             this.stopRotation();
+        }
+
+        // Set pause state if requested
+        if (autoPause) {
             this.isPaused = true;
             this.updatePauseIndicator();
         }
@@ -260,6 +329,11 @@ class KioskSlideshow {
             this.showSlide(this.currentIndex);
         } else {
             console.log('No previous slide in history');
+        }
+
+        // Restart rotation if it was playing and we're not pausing
+        if (wasPlaying && !autoPause) {
+            this.startRotation();
         }
     }
 
@@ -439,7 +513,6 @@ class KioskSlideshow {
             `<div class="qr-section">
                 <img src="${slide.qr_code}" alt="Scan for more info"
                      onerror="this.parentElement.style.display='none'">
-                <div class="qr-label">${slide.type === 'business' ? 'Scan to Visit' : 'Scan for Details'}</div>
              </div>` : '';
 
         switch (slide.type) {
@@ -451,11 +524,15 @@ class KioskSlideshow {
                         ${mapOverlayHTML}
                     </div>
                     <div class="business-content">
-                        ${qrCodeHTML}
+                        <div class="business-tagline">${slide.tagline}</div>
+                        <div class="business-info-row">
+                            ${qrCodeHTML}
+                            <div class="business-contact-info">
+                                ${slide.address ? `<div class="business-address">${slide.address}</div>` : ''}
+                                ${slide.phone ? `<div class="business-phone">${slide.phone}</div>` : ''}
+                            </div>
+                        </div>
                         <div class="business-text">
-                            <div class="business-tagline">${slide.tagline}</div>
-                            ${slide.address ? `<div class="business-address">${slide.address}</div>` : ''}
-                            ${slide.phone ? `<div class="business-phone">${slide.phone}</div>` : ''}
                             <div class="business-cta">${slide.cta || 'Visit us today!'}</div>
                         </div>
                     </div>
