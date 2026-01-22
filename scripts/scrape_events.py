@@ -25,6 +25,7 @@ Data structure:
   "last_updated": "2026-01-11T12:00:00"
 }
 """
+import argparse
 import json
 import os
 import sys
@@ -39,9 +40,16 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SCRAPERS_DIR = os.path.join(SCRIPT_DIR, 'scrapers')
 sys.path.insert(0, SCRAPERS_DIR)
 
-# Configuration
-OUTPUT_FILE = '/home/mrdon/dev/louisville-kiosk/data/events.yaml'
-EVENTS_IMAGE_DIR = '/home/mrdon/dev/louisville-kiosk/images/events'
+# Project root is one level up from scripts/
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+
+# Default configuration (can be overridden via CLI args or env vars)
+DEFAULT_OUTPUT_FILE = os.environ.get('OUTPUT_FILE', os.path.join(PROJECT_ROOT, 'data/events.yaml'))
+DEFAULT_EVENTS_IMAGE_DIR = os.environ.get('EVENTS_IMAGE_DIR', os.path.join(PROJECT_ROOT, 'images/events'))
+
+# These will be set by main() from CLI args
+OUTPUT_FILE = DEFAULT_OUTPUT_FILE
+EVENTS_IMAGE_DIR = DEFAULT_EVENTS_IMAGE_DIR
 
 
 def slugify(text):
@@ -202,6 +210,23 @@ def main():
     """
     Main scraper function
     """
+    global OUTPUT_FILE, EVENTS_IMAGE_DIR
+
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Scrape Louisville events')
+    parser.add_argument('--output', '-o', default=DEFAULT_OUTPUT_FILE,
+                        help='Output YAML file path')
+    parser.add_argument('--images', '-i', default=DEFAULT_EVENTS_IMAGE_DIR,
+                        help='Directory to save event images')
+    args = parser.parse_args()
+
+    # Set global paths
+    OUTPUT_FILE = args.output
+    EVENTS_IMAGE_DIR = args.images
+
+    print(f"Output file: {OUTPUT_FILE}")
+    print(f"Images directory: {EVENTS_IMAGE_DIR}")
+
     # Scrape events from all sources
     events = scrape_all_events()
 

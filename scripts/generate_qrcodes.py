@@ -9,6 +9,10 @@ import glob
 import qrcode
 from PIL import Image
 
+# Project root is one level up from scripts/
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+
 def slugify(text):
     """Convert text to filename slug"""
     text = text.lower()
@@ -179,10 +183,10 @@ def main():
     print("Generating QR codes for all items with URLs\n")
 
     # Get data directory
-    data_dir = '/home/mrdon/dev/louisville-kiosk/data'
+    data_dir = os.path.join(PROJECT_ROOT, 'data')
 
     # Create qrcodes directory if needed
-    qrcodes_dir = '/home/mrdon/dev/louisville-kiosk/images/qrcodes'
+    qrcodes_dir = os.path.join(PROJECT_ROOT, 'images/qrcodes')
     os.makedirs(qrcodes_dir, exist_ok=True)
 
     # Find all YAML files in data directory

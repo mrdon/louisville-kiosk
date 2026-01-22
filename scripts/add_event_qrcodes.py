@@ -3,8 +3,13 @@
 Add qr_code fields to events.yaml for events that have URLs
 """
 import yaml
+import os
 import re
 from datetime import datetime
+
+# Project root is one level up from scripts/
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 
 def slugify(text):
     """Convert event title to filename slug"""
@@ -16,7 +21,7 @@ def slugify(text):
 def main():
     print("Adding QR code fields to events.yaml\n")
 
-    events_file = '/home/mrdon/dev/louisville-kiosk/data/events.yaml'
+    events_file = os.path.join(PROJECT_ROOT, 'data/events.yaml')
 
     # Load events
     with open(events_file, 'r') as f:

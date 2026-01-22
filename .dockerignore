@@ -8,8 +8,6 @@ venv/
 .git/
 .gitignore
 Makefile
-README.md
-scripts/
 backups/
 
 # IDE

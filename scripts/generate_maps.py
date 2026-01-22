@@ -11,8 +11,13 @@ import re
 import json
 import hashlib
 import glob
+import argparse
 from staticmap import StaticMap, IconMarker
 from PIL import Image, ImageDraw
+
+# Project root is one level up from scripts/
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 
 def slugify(text):
     """Convert business name to filename slug"""
@@ -183,8 +188,8 @@ def main():
     print("Using staticmap library with OpenStreetMap tiles\n")
 
     # Load businesses data
-    businesses_file = '/home/mrdon/dev/louisville-kiosk/data/businesses.yaml'
-    events_file = '/home/mrdon/dev/louisville-kiosk/data/events.yaml'
+    businesses_file = os.path.join(PROJECT_ROOT, 'data/businesses.yaml')
+    events_file = os.path.join(PROJECT_ROOT, 'data/events.yaml')
 
     with open(businesses_file, 'r') as f:
         businesses = yaml.safe_load(f)
@@ -207,7 +212,7 @@ def main():
         events = unique_events
 
     # Create maps directory if needed
-    maps_dir = '/home/mrdon/dev/louisville-kiosk/images/maps'
+    maps_dir = os.path.join(PROJECT_ROOT, 'images/maps')
     os.makedirs(maps_dir, exist_ok=True)
 
     print(f"Found {len(businesses)} businesses and {len(events)} events\n")

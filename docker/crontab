@@ -1,0 +1,7 @@
+# Louisville Kiosk - Nightly scraper schedule
+# Runs at 3:00 AM Mountain Time daily
+
+# Scrape events nightly
+0 3 * * * /app/scripts/run-scrapers.sh >> /var/log/scraper.log 2>&1
+
+# Keep cron running (required for Alpine)
