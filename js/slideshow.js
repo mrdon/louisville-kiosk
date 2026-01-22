@@ -168,10 +168,6 @@ class KioskSlideshow {
                 }
             });
 
-            // Update clock
-            this.updateClock();
-            setInterval(() => this.updateClock(), 1000);
-
             // Refresh data files every 6 hours
             setInterval(() => this.refreshData(), 6 * 60 * 60 * 1000);
 
@@ -449,6 +445,7 @@ class KioskSlideshow {
         switch (slide.type) {
             case 'business':
                 return `
+                    <h2 class="business-name">${slide.name}</h2>
                     <div class="business-image-wrapper">
                         ${primaryImageHTML}
                         ${mapOverlayHTML}
@@ -456,7 +453,6 @@ class KioskSlideshow {
                     <div class="business-content">
                         ${qrCodeHTML}
                         <div class="business-text">
-                            <h2>${slide.name}</h2>
                             <div class="business-tagline">${slide.tagline}</div>
                             ${slide.address ? `<div class="business-address">${slide.address}</div>` : ''}
                             ${slide.phone ? `<div class="business-phone">${slide.phone}</div>` : ''}
@@ -598,26 +594,6 @@ class KioskSlideshow {
         }
     }
 
-    updateClock() {
-        const now = new Date();
-
-        // Update time
-        const timeStr = now.toLocaleTimeString('en-US', {
-            hour: 'numeric',
-            minute: '2-digit',
-            hour12: true
-        });
-        document.getElementById('current-time').textContent = timeStr;
-
-        // Update date
-        const dateStr = now.toLocaleDateString('en-US', {
-            weekday: 'long',
-            month: 'long',
-            day: 'numeric',
-            year: 'numeric'
-        });
-        document.getElementById('current-date').textContent = dateStr;
-    }
 }
 
 // Initialize when page loads (or immediately if already loaded)

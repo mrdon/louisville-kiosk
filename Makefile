@@ -183,7 +183,7 @@ test-all-scrapers: test-chamber-scraper test-community-scraper test-eventbrite-s
 generate-all: generate-maps generate-qrcodes ## Generate both maps and QR codes
 
 # Development workflow
-dev: validate serve ## Validate and start development server
+dev: install-deps validate serve ## Install deps, validate, and start development server
 
 prepush: validate backup ## Run before pushing changes (validate + backup)
 	@echo "✓ Ready to push"

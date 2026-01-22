@@ -20,15 +20,25 @@ body {
     flex-direction: column;
 }
 
-/* Status bar */
-#status-bar {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 1vh 2vw;
+/* Pause indicator - floating in corner */
+#pause-indicator {
+    position: fixed;
+    top: 10px;
+    right: 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    font-size: clamp(1rem, 1.5vh, 1.5rem);
-    font-weight: 300;
+    justify-content: center;
+    color: #ffffff;
+    opacity: 0.4;
+    z-index: 100;
+}
+
+#pause-indicator.hidden {
+    display: none;
+}
+
+#pause-indicator svg {
+    display: block;
 }
 
 /* Main slideshow */
@@ -142,45 +152,63 @@ body {
     background: linear-gradient(135deg, rgba(170, 8, 35, 0.9) 0%, rgba(199, 32, 21, 0.9) 100%);
 }
 
-.slide.business .business-logo {
-    font-size: 5rem;
+/* Title at top */
+.slide.business .business-name {
+    font-size: clamp(2.8rem, 6vh, 5rem);
     font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.slide.business h2 {
-    font-size: clamp(2.2rem, 4.5vh, 4rem);
-    font-weight: 600;
     margin-bottom: 2vh;
 }
 
+/* Description below image */
 .slide.business .business-tagline {
-    font-size: clamp(1.4rem, 2.8vh, 2.5rem);
+    font-size: clamp(1.8rem, 4vh, 3rem);
     font-weight: 300;
     margin-bottom: 2vh;
 }
 
 .slide.business .business-address {
-    font-size: clamp(1.2rem, 2.4vh, 2.2rem);
+    font-size: clamp(1.5rem, 3vh, 2.4rem);
     font-weight: 400;
     margin-bottom: 1vh;
     opacity: 0.95;
 }
 
 .slide.business .business-phone {
-    font-size: clamp(1.1rem, 2.2vh, 2rem);
+    font-size: clamp(1.4rem, 2.8vh, 2.2rem);
     font-weight: 300;
     margin-bottom: 2vh;
     opacity: 0.9;
 }
 
 .slide.business .business-cta {
-    font-size: clamp(1.3rem, 2.5vh, 2.2rem);
-    font-weight: 400;
+    font-size: clamp(1.6rem, 3.2vh, 2.5rem);
+    font-weight: 500;
     margin-top: 1vh;
-    padding: 2vh 3vw;
+    padding: 1.5vh 2.5vw;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
+}
+
+/* Business content - QR code and text in columns */
+.business-content {
+    display: flex;
+    gap: 3vw;
+    align-items: flex-start;
+    width: 100%;
+    max-width: clamp(600px, 80vw, 1400px);
+}
+
+/* Business text - right column */
+.business-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.business-text .business-cta {
+    align-self: flex-start;
 }
 
 /* Town fact slides - Light Louisville Blue */
@@ -411,12 +439,12 @@ body {
     display: block;
 }
 
-/* Business image wrapper - contains both primary image and map overlay - 50% bigger */
+/* Business image wrapper - contains both primary image and map overlay */
 .business-image-wrapper {
     position: relative;
-    width: clamp(600px, 67.5vw, 1350px);
-    height: clamp(375px, 45vh, 750px);
-    margin: 0 auto 6vh auto;
+    width: clamp(400px, 55vw, 900px);
+    height: clamp(220px, 35vh, 500px);
+    margin: 0 auto 8vh auto; /* Extra margin to account for map overlay extending below */
 }
 
 /* Adjust primary image within business wrapper */
@@ -462,21 +490,12 @@ body {
     }
 }
 
-/* Business content - QR code and text in columns */
-.business-content {
-    display: flex;
-    gap: 3vw;
-    align-items: flex-start;
-    width: 100%;
-    max-width: clamp(600px, 80vw, 1400px);
-}
-
-/* QR code section - left column (1/3 width) */
+/* QR code section */
 .qr-section {
     flex: 0 0 auto;
-    width: clamp(150px, 20vw, 300px);
+    width: clamp(100px, 15vw, 180px);
     background: white;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
     border: 3px solid rgba(255, 255, 255, 0.9);
@@ -493,29 +512,11 @@ body {
 }
 
 .qr-label {
-    font-size: clamp(0.8rem, 1.5vh, 1.2rem);
+    font-size: clamp(1rem, 2vh, 1.4rem);
     font-weight: 600;
     color: #000;
-    margin-top: 10px;
+    margin-top: 8px;
     text-align: center;
-}
-
-/* Business text - right column (2/3 width) */
-.business-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
-
-.business-text h2 {
-    text-align: left;
-    width: 100%;
-}
-
-.business-text .business-cta {
-    align-self: flex-start;
 }
 
 /* Loading state */
@@ -532,23 +533,6 @@ body {
     display: none;
 }
 
-/* Pause indicator */
-#pause-indicator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    opacity: 0.4;
-    transition: opacity 0.3s ease;
-}
-
-#pause-indicator.hidden {
-    display: none;
-}
-
-#pause-indicator svg {
-    display: block;
-}
 
 /* Responsive sizing handled by clamp() functions above */
 /* All content scales fluidly based on viewport dimensions */
