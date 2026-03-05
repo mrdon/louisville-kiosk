@@ -171,7 +171,7 @@ class KioskSlideshow {
             // Refresh data files every 6 hours
             setInterval(() => this.refreshData(), 6 * 60 * 60 * 1000);
 
-            // Hot-reload CSS/JS every 12 hours (preserves fullscreen state)
+            // Hot-reload CSS/JS every 12 hours
             setInterval(() => this.hotReloadAssets(), 12 * 60 * 60 * 1000);
 
             // Setup keyboard controls
@@ -347,17 +347,7 @@ class KioskSlideshow {
             link.href = `css/styles.css?v=${timestamp}`;
         }
 
-        // For JS, we need to reload the page - but PWA manifest keeps us fullscreen
-        // Only reload if we detect the page was installed as PWA (standalone mode)
-        if (window.matchMedia('(display-mode: standalone)').matches ||
-            window.matchMedia('(display-mode: fullscreen)').matches ||
-            window.navigator.standalone === true) {
-            // Safe to reload - PWA will maintain fullscreen
-            location.reload(true);
-        } else {
-            console.log('Not in standalone mode - skipping JS reload to preserve fullscreen');
-            // At least CSS is reloaded above
-        }
+        location.reload(true);
     }
 
     async refreshData() {
